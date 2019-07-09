@@ -3,6 +3,7 @@ package com.example.lokaciinternassignment.activity;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.lokaciinternassignment.R;
 import com.example.lokaciinternassignment.adapter.ShopListAdapter;
@@ -33,7 +34,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         shopListItems.add(new ShopListItem(R.drawable.shop_three, "Third Shop", 3.0, 7.0, "Address Three"));
         shopListItems.add(new ShopListItem(R.drawable.shop_four, "Forth Shop", 2.0, 1.0, "Address Four"));
 
+
+
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
+        new LinearSnapHelper().attachToRecyclerView(recyclerView);
         ShopListAdapter shopListAdapter = new ShopListAdapter(shopListItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(shopListAdapter);
