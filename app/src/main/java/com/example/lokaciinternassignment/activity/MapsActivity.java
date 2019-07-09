@@ -27,15 +27,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
-
         ArrayList<ShopListItem> shopListItems = new ArrayList<>();
-        shopListItems.add(new ShopListItem(R.drawable.shop_one,"First Shop",5.0,2.0,"Address One"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_two,"Second Shop",4.0,5.0,"Address Two"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_three,"Third Shop",3.0,7.0,"Address Three"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_four,"Forth Shop",2.0,1.0,"Address Four"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_one, "First Shop", 5.0, 2.0, "Address One"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_two, "Second Shop", 4.0, 5.0, "Address Two"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_three, "Third Shop", 3.0, 7.0, "Address Three"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_four, "Forth Shop", 2.0, 1.0, "Address Four"));
 
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
-        
         ShopListAdapter shopListAdapter = new ShopListAdapter(shopListItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(shopListAdapter);
@@ -45,7 +43,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        // Add a marker in Sydney and move the camera
         LatLng coordinate = new LatLng(-34, 151);
         googleMap.addMarker(new MarkerOptions().position(coordinate).title("Marker in Sydney"));
 
