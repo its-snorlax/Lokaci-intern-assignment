@@ -3,12 +3,12 @@ package com.example.lokaciinternassignment.model;
 public class ShopListItem {
     private int imageid;
     private String shopName;
-    private int rating;
+    private double rating;
     private double distance;
     private String address;
 
 
-    public ShopListItem(int imageid, String shopName, int rating, double distance, String address) {
+    public ShopListItem(int imageid, String shopName, double rating, double distance, String address) {
         this.imageid = imageid;
         this.shopName = shopName;
         this.rating = rating;
@@ -24,7 +24,7 @@ public class ShopListItem {
         return imageid;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 

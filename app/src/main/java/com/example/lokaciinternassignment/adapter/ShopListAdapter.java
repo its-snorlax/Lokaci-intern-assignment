@@ -44,12 +44,12 @@ public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         private ImageView imageView;
         private TextView nameView;
         private TextView ratingView;
         private TextView distanceView;
         private TextView addressView;
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.shop_image);
@@ -58,5 +58,6 @@ public class ShopListAdapter extends RecyclerView.Adapter<ShopListAdapter.ViewHo
             distanceView = itemView.findViewById(R.id.distance_view);
             addressView = itemView.findViewById(R.id.address_view);
         }
+
     }
 }

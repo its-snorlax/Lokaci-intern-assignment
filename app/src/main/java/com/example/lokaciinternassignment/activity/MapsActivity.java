@@ -1,7 +1,6 @@
 package com.example.lokaciinternassignment.activity;
 
 import android.os.Bundle;
-import android.widget.OverScroller;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,9 +13,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import me.everything.android.ui.overscroll.HorizontalOverScrollBounceEffectDecorator;
-import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
-import me.everything.android.ui.overscroll.adapters.RecyclerViewOverScrollDecorAdapter;
 
 import java.util.ArrayList;
 
@@ -33,10 +29,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         ArrayList<ShopListItem> shopListItems = new ArrayList<>();
-        shopListItems.add(new ShopListItem(R.drawable.shop_one,"First Shop",5,2.0,"Address One"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_two,"Second Shop",4,5.0,"Address Two"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_three,"Third Shop",3,7.0,"Address Three"));
-        shopListItems.add(new ShopListItem(R.drawable.shop_four,"Forth Shop",2,1.0,"Address Four"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_one,"First Shop",5.0,2.0,"Address One"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_two,"Second Shop",4.0,5.0,"Address Two"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_three,"Third Shop",3.0,7.0,"Address Three"));
+        shopListItems.add(new ShopListItem(R.drawable.shop_four,"Forth Shop",2.0,1.0,"Address Four"));
 
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
         
