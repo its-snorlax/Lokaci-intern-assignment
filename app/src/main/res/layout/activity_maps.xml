@@ -13,8 +13,9 @@
               tools:context=".activity.MapsActivity"
               android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
-    <!--<androidx.appcompat.app.AlertController.RecycleListView-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
 </RelativeLayout>
