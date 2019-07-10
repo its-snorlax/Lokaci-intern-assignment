@@ -6,14 +6,18 @@ public class ShopListItem {
     private double rating;
     private double distance;
     private String address;
+    private double latitude;
+    private double longitude;
 
 
-    public ShopListItem(int imageid, String shopName, double rating, double distance, String address) {
+    public ShopListItem(int imageid, String shopName, double rating, double distance, String address, double latitude, double longitude) {
         this.imageid = imageid;
         this.shopName = shopName;
         this.rating = rating;
         this.distance = distance;
         this.address = address;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getShopName(){
@@ -34,5 +38,17 @@ public class ShopListItem {
 
     public String getAddress() {
         return address;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
     }
 }
