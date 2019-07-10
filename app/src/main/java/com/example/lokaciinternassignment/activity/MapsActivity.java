@@ -41,6 +41,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         shopListItems.add(new ShopListItem(R.drawable.shop_two, "Agra", 4.0, 5.0, "Address Two", 27.1767, 78.0081));
         shopListItems.add(new ShopListItem(R.drawable.shop_three, "Jaipur", 3.0, 7.0, "Address Three", 26.9124, 75.7873));
         shopListItems.add(new ShopListItem(R.drawable.shop_four, "Gurugram", 2.0, 1.0, "Address Four", 28.4595, 77.0266));
+        shopListItems.add(new ShopListItem((R.drawable.red_kitten_01),"Apka Bazar",3.0,2.5,"Address Five",28.4598,77.0312));
 
 
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
@@ -63,7 +64,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             double latitude = shopListItem.getLatitude();
             String shopName = shopListItem.getShopName();
             LatLng coordinate = new LatLng(latitude, longitude);
-            googleMap.addMarker(new MarkerOptions().position(coordinate).title(shopName));
+            googleMap.addMarker(new MarkerOptions().position(coordinate).title(shopName).draggable(true));
         }
     }
 
